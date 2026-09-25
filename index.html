@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PromptLab Pro | EducationalLabsHDT – Master AI Productivity in 7 Days</title>
+  <meta name="description" content="The complete 7-Day AI Productivity Lab. Master ChatGPT, Gemini & free AI tools with ready-to-use prompts, daily challenges and Notion template. By EducationalLabsHDT.">
+  <style>
+    :root {
+      --primary: #0f172a;
+      --accent: #3b82f6;
+      --accent-hover: #2563eb;
+      --success: #10b981;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #1e293b;
+      --muted: #64748b;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+    header {
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+      color: white;
+      padding: 60px 0 80px;
+      text-align: center;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(59,130,246,0.2);
+      border: 1px solid rgba(59,130,246,0.4);
+      color: #93c5fd;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+    .subtitle {
+      font-size: 1.25rem;
+      color: #cbd5e1;
+      max-width: 640px;
+      margin: 0 auto 32px;
+    }
+    .price-box {
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(8px);
+      border-radius: 16px;
+      padding: 24px 40px;
+      display: inline-block;
+      margin-bottom: 24px;
+    }
+    .price {
+      font-size: 3rem;
+      font-weight: 800;
+      color: #fff;
+    }
+    .old-price {
+      text-decoration: line-through;
+      color: #94a3b8;
+      font-size: 1.2rem;
+      margin-right: 12px;
+    }
+    .cta {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      font-weight: 700;
+      font-size: 1.15rem;
+      padding: 16px 40px;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: all 0.2s;
+      box-shadow: 0 10px 25px -5px rgba(59,130,246,0.4);
+    }
+    .cta:hover {
+      background: var(--accent-hover);
+      transform: translateY(-2px);
+    }
+    .guarantee {
+      margin-top: 16px;
+      font-size: 0.9rem;
+      color: #94a3b8;
+    }
+    section { padding: 70px 0; }
+    h2 {
+      font-size: 2rem;
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .card {
+      background: var(--card);
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      border: 1px solid #e2e8f0;
+    }
+    .card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .icon {
+      width: 40px;
+      height: 40px;
+      background: #dbeafe;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+    }
+    .what-you-get li {
+      list-style: none;
+      padding: 10px 0;
+      border-bottom: 1px solid #f1f5f9;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .what-you-get li:last-child { border-bottom: none; }
+    .check { color: var(--success); font-weight: bold; }
+    .days {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 16px;
+      text-align: center;
+    }
+    .day {
+      background: white;
+      border-radius: 12px;
+      padding: 20px 12px;
+      border: 1px solid #e2e8f0;
+    }
+    .day strong { display: block; color: var(--accent); font-size: 1.1rem; }
+    .testimonial {
+      background: #0f172a;
+      color: white;
+      border-radius: 16px;
+      padding: 32px;
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .testimonial p { font-size: 1.2rem; font-style: italic; margin-bottom: 16px; }
+    footer {
+      background: #0f172a;
+      color: #94a3b8;
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.9rem;
+    }
+    footer a { color: #93c5fd; text-decoration: none; }
+    .sticky-cta {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 100;
+    }
+    @media (max-width: 600px) {
+      .sticky-cta { left: 20px; right: 20px; text-align: center; }
+      .cta { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="badge">EducationalLabsHDT · Digital Product</div>
+      <h1>PromptLab Pro<br>The 7-Day AI Productivity Lab</h1>
+      <p class="subtitle">Master ChatGPT, Gemini and free AI tools with ready-to-use prompts, daily challenges and a complete Notion system. No fluff. Real results in one week.</p>
+      <div class="price-box">
+        <span class="old-price">$97</span>
+        <span class="price">$37</span>
+        <div style="font-size:0.95rem;color:#cbd5e1;margin-top:4px;">One-time payment · Instant access</div>
+      </div>
+      <br>
+      <a href="#buy" class="cta">Get Instant Access →</a>
+      <p class="guarantee">30-day money-back guarantee · Lifetime updates</p>
+    </div>
+  </header>
+
+  <section>
+    <div class="container">
+      <h2>What You Get Inside</h2>
+      <div class="grid">
+        <div class="card">
+          <h3><span class="icon">📘</span> Complete Manual</h3>
+          <p>Step-by-step PDF guide that takes you from zero to confident AI user. Clear language, practical examples, zero jargon.</p>
+        </div>
+        <div class="card">
+          <h3><span class="icon">⚡</span> 50+ Ready Prompts</h3>
+          <p>Copy-paste prompts for writing, studying, organizing, research, content creation and daily productivity. Organized by category.</p>
+        </div>
+        <div class="card">
+          <h3><span class="icon">📅</span> 7-Day Challenge</h3>
+          <p>One focused mission per day. Build the habit, see measurable progress, finish the week with a real system that works.</p>
+        </div>
+        <div class="card">
+          <h3><span class="icon">🗂️</span> Notion Template</h3>
+          <p>Beautiful ready-to-duplicate workspace to track your prompts, results and daily wins. Works on free Notion plan.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#e0f2fe;">
+    <div class="container">
+      <h2>Your 7-Day Journey</h2>
+      <div class="days">
+        <div class="day"><strong>Day 1</strong>Foundations & Setup</div>
+        <div class="day"><strong>Day 2</strong>Writing Superpowers</div>
+        <div class="day"><strong>Day 3</strong>Research & Learning</div>
+        <div class="day"><strong>Day 4</strong>Organization Systems</div>
+        <div class="day"><strong>Day 5</strong>Content Creation</div>
+        <div class="day"><strong>Day 6</strong>Advanced Prompts</div>
+        <div class="day"><strong>Day 7</strong>Your Personal AI Lab</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>Perfect For</h2>
+      <ul class="what-you-get" style="max-width:600px;margin:0 auto;">
+        <li><span class="check">✓</span> Students who want to study smarter</li>
+        <li><span class="check">✓</span> Professionals drowning in emails and tasks</li>
+        <li><span class="check">✓</span> Creators who need content ideas fast</li>
+        <li><span class="check">✓</span> Anyone curious about AI but overwhelmed by options</li>
+        <li><span class="check">✓</span> Parents and lifelong learners (family-friendly content)</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="testimonial">
+        <p>“I went from staring at a blank ChatGPT to finishing reports in half the time. The daily structure is what made the difference.”</p>
+        <strong>— Early tester feedback</strong>
+      </div>
+    </div>
+  </section>
+
+  <section id="buy" style="background:linear-gradient(135deg,#0f172a,#1e3a8a);color:white;text-align:center;">
+    <div class="container">
+      <h2 style="color:white;">Ready to build your AI Productivity Lab?</h2>
+      <p style="font-size:1.2rem;color:#cbd5e1;max-width:500px;margin:0 auto 30px;">One payment. Instant download. Lifetime access + future updates from EducationalLabsHDT.</p>
+      <div class="price-box" style="background:rgba(255,255,255,0.1);">
+        <span class="old-price">$97</span>
+        <span class="price">$37</span>
+      </div>
+      <br><br>
+      <a href="mailto:hello@educationallabshdt.com?subject=PromptLab%20Pro%20Purchase&body=I%20want%20to%20buy%20PromptLab%20Pro%20for%20%2437.%20Please%20send%20payment%20link%20and%20access." class="cta">Buy Now – Instant Access</a>
+      <p class="guarantee" style="color:#94a3b8;">Secure delivery · 30-day guarantee · Support included</p>
+      <p style="margin-top:30px;font-size:0.9rem;color:#64748b;">Digital product by EducationalLabsHDT · All content suitable for all ages</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 EducationalLabsHDT · All rights reserved</p>
+    <p style="margin-top:8px;">Built for learners who want real results</p>
+  </footer>
+
+  <div class="sticky-cta">
+    <a href="#buy" class="cta" style="font-size:1rem;padding:12px 24px;">Get PromptLab Pro – $37</a>
+  </div>
+</body>
+</html>
